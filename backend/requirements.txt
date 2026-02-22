@@ -1,0 +1,40 @@
+# Core Framework
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0
+pydantic>=2.5.3
+pydantic-settings>=2.1.0
+
+# Performance Optimization
+orjson>=3.9.0          # Fast JSON serialization (2-3x faster)
+certifi>=2024.0.0      # SSL certificates
+
+# Database
+motor>=3.6.0           # Async MongoDB driver
+beanie>=1.26.0         # MongoDB ODM
+
+# Authentication & Security
+passlib==1.7.4
+bcrypt==4.0.1
+python-jose[cryptography]==3.3.0
+python-multipart==0.0.9
+email-validator==2.1.0.post1
+google-auth>=2.27.0     # Google OAuth verification
+
+# AI/ML
+groq>=1.0.0            # LLM API
+pandas>=2.2.0          # Data manipulation
+scikit-learn>=1.4.0    # ML models
+numpy>=1.26.3          # Numerical computing
+
+# Utilities
+python-dotenv>=1.0.0
+httpx>=0.26.0          # Async HTTP client
+python-dateutil>=2.8.2
+
+# PDF & Document Processing
+pymupdf>=1.24.0        # PDF text extraction
+openpyxl>=3.1.0        # Excel file parsing
+
+# Testing
+pytest>=8.0.0
+pytest-asyncio>=0.23.0  # Async test support

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO & Meta -->
+    <title>STRATA-AI | Startup Survival & Strategy Assistant</title>
+    <meta name="description" content="AI-powered financial runway prediction, scenario analysis, and pivot strategy generation for startups." />
+    <meta name="theme-color" content="#1B8A6B" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    
+    <!-- Preconnect to external resources for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Preload critical font -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+    
+    <!-- DNS prefetch for API (update with your production URL) -->
+    <link rel="dns-prefetch" href="//api.groq.com" />
+    
+    <!-- Prevent FOUC (Flash of Unstyled Content) -->
+    <style>
+      /* Critical CSS - inline to prevent render blocking */
+      html { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+      body { margin: 0; background-color: #F5F5F0; }
+      #root { min-height: 100vh; }
+      
+      /* Initial loading state */
+      .initial-loader {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: #F5F5F0;
+      }
+      .initial-loader::after {
+        content: '';
+        width: 40px;
+        height: 40px;
+        border: 3px solid #e5e7eb;
+        border-top-color: #1B8A6B;
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
+      }
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Initial loader shown before React hydrates -->
+    <div id="root"><div class="initial-loader"></div></div>
+    
+    <!-- Main app script - module for tree shaking -->
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Fallback for no-JS -->
+    <noscript>
+      <div style="padding: 2rem; text-align: center; font-family: system-ui;">
+        <h1>JavaScript Required</h1>
+        <p>STRATA-AI requires JavaScript to run. Please enable JavaScript in your browser settings.</p>
+      </div>
+    </noscript>
+  </body>
+</html>
