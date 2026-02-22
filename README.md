@@ -28,33 +28,36 @@ Startify is an AI-powered platform designed to bridge the gap between startup fo
 ## 🚦 Quick Start (Local Development)
 
 ### 1. Clone the repository
-\`\`\`bash
+`bash
 git clone https://github.com/YOUR_USERNAME/startify.git
 cd startify
-\`\`\`
+\`
 
 ### 2. Backend Setup
-\`\`\`bash
+`bash
 cd backend
 python -m venv venv
 source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 pip install -r requirements.txt
-\`\`\`
+\`
+`
 *Create a `.env` file in the `backend` directory and add your `MONGODB_URI`.*
-\`\`\`bash
+\`
+`bash
 uvicorn app.main:app --reload
-\`\`\`
+\`
 
 ### 3. Frontend Setup
 Open a new terminal window:
-\`\`\`bash
+`bash
 cd frontend
 npm install
 npm run dev
-\`\`\`
+\`
 
 ## 🔒 Security
 Environment variables and proprietary datasets (like `cleaned_investors.csv`) are strictly ignored via `.gitignore` to protect pipeline intelligence.
 
 ---
 *Built for founders, by founders.*
+
